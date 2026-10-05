@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Practical Application Activity</title>
+</head>
+<body>
+    <header id="main-header">
+        <h1 id="main-heading">HTML Practical Application Activity</h1>
+        <p>
+            This webpage demonstrates Images, Hyperlinks, Multimedia,
+            Useful HTML Tags, and the HTML DOM.
+        </p>
+        <nav id="main-navigation">
+            <ul>
+                <li><a href="#images-section">Images</a></li>
+                <li><a href="#hyperlinks-section">Hyperlinks</a></li>
+                <li><a href="#multimedia-section">Multimedia</a></li>
+                <li><a href="#useful-tags-section">Useful Tags</a></li>
+                <li><a href="#dom-section">HTML DOM</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-content">
+        <!-- SECTION 1: IMAGES -->
+        <section id="images-section">
+            <h2>Images</h2>
+            <figure id="campus-figure">
+                <img
+                    src="images/image1.jpg"
+                    alt="A view of Caraga State University campus"
+                    width="400"
+                >
+                <figcaption>
+                    A campus view representing my life as an Information Technology student.
+                </figcaption>
+            </figure>
+            <img
+                src="images/image2.jpg"
+                alt="A laptop displaying computer programming code"
+                width="350"
+            >
+            <img
+                src="images/image3.jpg"
+                alt="A computer setup used for studying and programming"
+                width="350"
+            >
+        </section>
+        <hr>
+        <!-- SECTION 2: HYPERLINKS -->
+        <section id="hyperlinks-section">
+            <h2>Hyperlinks</h2>
+
+            <p>
+                <strong>Internal Link:</strong>
+                <a href="activity.html">Return to the main activity page</a>
+            </p>
+
+            <p>
+                <strong>External Link:</strong>
+                <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">
+                    Visit MDN Web Docs
+                </a>
+            </p>
+
+            <p>
+                <strong>Email Link:</strong>
+                <a href="mailto:student@example.com">laurencepauljigger.egay@carsu.edu.ph</a>
+            </p>
+
+            <p>
+                <strong>Same-page Anchor Link:</strong>
+                <a href="#multimedia-section">Jump to the Multimedia section</a>
+            </p>
+        </section>
+        <hr>
+        <!-- SECTION 3: MULTIMEDIA -->
+        <section id="multimedia-section">
+            <h2>Multimedia</h2>
+
+            <h3>Audio</h3>
+            <audio controls>
+                <source src="media/audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h3>Video</h3>
+            <video controls width="500">
+                <source src="media/video.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section>
+        <hr>
+        <!-- SECTION 4: USEFUL TAGS -->
+        <section id="useful-tags-section">
+            <h2>Useful Tags</h2>
+            <!-- I used the blockquote tag to display a quotation separately from normal paragraphs. -->
+            <blockquote>
+                “The beautiful thing about learning is that nobody can take it away from you.”
+            </blockquote>
+            <!-- I used the abbr tag to show the complete meaning of an abbreviation when hovered over. -->
+            <p>
+                I am currently studying <abbr title="Bachelor of Science in Information Technology">BSIT</abbr>.
+            </p>
+            <!-- I used the mark tag to highlight important words in the sentence. -->
+            <p>
+                Learning <mark>HTML</mark> is one of the foundations of web development.
+            </p>
+            <!-- I used the code tag to display a short piece of HTML code. -->
+            <p>
+                An example HTML heading is <code>&lt;h1&gt;Hello World&lt;/h1&gt;</code>.
+            </p>
+            <!-- I used the copyright character entity to display the copyright symbol correctly. -->
+            <p>&copy; 2026 HTML Practical Application Activity</p>
+        </section>
+
+        <hr>
+        <!-- SECTION 5: HTML DOM -->
+        <section id="dom-section">
+            <h2>HTML DOM</h2>
+
+            <article id="dom-article">
+                <h3>Understanding the DOM</h3>
+
+                <div id="dom-container">
+                    <p>
+                        The HTML DOM represents a webpage as a tree of connected elements.
+                    </p>
+
+                    <ul id="dom-list">
+                        <li>HTML is the root element.</li>
+                        <li>Body is a child of HTML.</li>
+                        <li>Sections are children of the main element.</li>
+                        <li>Headings and paragraphs are children of sections.</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer id="page-footer">
+        <p>HTML Practical Application Activity 2</p>
+    </footer>
+    <!--
+    In the DOM tree, the main element is the parent of the different section elements on the page.
+    Inside the Images section, the figure element is the parent of both the img and figcaption elements.
+    In the HTML DOM section, the ul element with the id "dom-list" is the parent of its li elements.
+    These parent-child relationships show how HTML elements are organized into a tree structure in the DOM.
+    -->
+</body>
+</html>
