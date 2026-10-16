@@ -1,0 +1,274 @@
+/* ==================================================
+   RESET AND GLOBAL STYLES
+   ================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: rgb(45, 45, 45);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* ==================================================
+   HEADER AND NAVIGATION
+   ================================================== */
+
+header {
+    background-color: #243447;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 30px;
+}
+
+/* Grouping selector */
+h1,
+h2 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/*
+   CASCADE EXAMPLE:
+   This rule gives all links a dark blue color.
+*/
+a {
+    color: navy;
+}
+
+/*
+   This rule wins for navigation links because
+   "nav a" is more specific than the type selector "a".
+*/
+nav a {
+    display: inline-block;
+    color: white;
+    background-color: rgb(70, 130, 180);
+    padding: 8px 18px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Pseudo-class */
+nav a:hover {
+    background-color: #162536;
+    transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   MAIN LAYOUT AND CARDS
+   ================================================== */
+
+main {
+    padding: 10px 0 30px;
+}
+
+.card {
+    width: 500px;
+    max-width: 90%;
+    padding: 24px;
+
+    /* border width + style + color in one declaration */
+    border: 2px solid #b7c4d3;
+
+    border-radius: 12px;
+
+    /* Centers each card horizontally */
+    margin: 0 auto;
+    margin-bottom: 25px;
+
+    background-color: white;
+
+    /* Optional visual improvement */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+/*
+   Because box-sizing is border-box:
+   Declared width = 500px.
+   Padding and border are already included inside the 500px.
+   Therefore, the total rendered width is 500px.
+*/
+
+
+/* Descendant selector */
+.card p {
+    margin-top: 10px;
+    color: rgb(70, 70, 70);
+}
+
+
+/* ==================================================
+   HEADINGS AND INTRODUCTION
+   ================================================== */
+
+h2 {
+    color: #243447;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+/* Pseudo-element */
+h2::before {
+    content: "◆ ";
+    color: steelblue;
+}
+
+.intro {
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #3c6382;
+}
+
+/* Another pseudo-element example */
+.intro::first-letter {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   ABOUT SECTION
+   ================================================== */
+
+#about {
+    position: relative;
+    border: 3px solid #4682b4;
+    background-color: #eef7ff;
+}
+
+/* Badge positioned in the top-right corner */
+#about::after {
+    content: "PROFILE";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background-color: rgb(70, 130, 180);
+    color: white;
+
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   SKILLS SECTION
+   ================================================== */
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    list-style: none;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+/* Child selector */
+.skills-list > li {
+    background-color: #243447;
+    color: white;
+
+    padding: 8px 14px;
+    border-radius: 20px;
+
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   DISPLAY AND VISIBILITY
+   ================================================== */
+
+.hide-none {
+    display: none;
+}
+
+.hide-visibility {
+    visibility: hidden;
+}
+
+/*
+   display: none removes the element completely,
+   so it does not leave any space on the page.
+
+   visibility: hidden makes the element invisible,
+   but the space it occupies remains.
+*/
+
+
+/* ==================================================
+   SCROLLABLE HOBBIES SECTION
+   ================================================== */
+
+.scroll-box {
+    height: 120px;
+    overflow: auto;
+}
+
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+footer {
+    background-color: #243447;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+/* ==================================================
+   REFLECTION QUESTIONS
+   ==================================================
+
+1. Why did one of the two conflicting rules win?
+
+The nav a rule wins over the a rule because nav a is more
+specific. The a selector only targets all anchor elements, while
+nav a specifically targets anchor elements located inside the nav.
+
+2. What would the rendered width of one .card be if
+   box-sizing were content-box instead of border-box?
+
+The .card has a width of 500px, padding of 24px on both sides,
+and a 2px border on both sides.
+
+500px + 24px + 24px + 2px + 2px = 552px
+
+Therefore, if content-box were used, the total rendered width
+would be 552px.
+
+3. When would you choose visibility: hidden instead of
+   display: none?
+
+I would use visibility: hidden when I want an element to become
+invisible while still keeping its original space in the layout.
+I would use display: none when I want the element and its space
+to disappear completely.
+
+================================================== */
